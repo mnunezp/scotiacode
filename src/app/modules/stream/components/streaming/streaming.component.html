@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row justify-content-between align-items-stretch pt-4 stream">
+    <div class="col-md-12 col-lg-8 mb-3 mb-lg-0">
+      <plyr class="video-frame round-border border mx-auto" autoplay plyrTitle="Video" [plyrPlaysInline]="true" (plyrInit)="player = $event" (plyrPlay)="played($event)"></plyr>
+    </div>
+    <div class="col-md-12 col-lg-4 mb-3 mb-lg-0">
+      <app-chat [user]='currentUser' class="mx-auto chat-view h-100"></app-chat>
+    </div>
+  </div>
+</div>

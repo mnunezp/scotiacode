@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="landing-title">
+        Bienvenid@s a la sala virtual
+      </h1>
+    </div>
+
+    <div id="logreg-forms" class="mx-auto">
+      <div class="round-border border">
+        <form class="form-signin" [formGroup]="landingForm">
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            class="form-control"
+            style="color: #777777;"
+            placeholder="Nombre"
+            required=true
+            autofocus=""
+          />
+          <hr />
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+            style="color: #777777;"
+            placeholder="Correo"
+            required=true
+          />
+          <hr />
+          <input
+            type="text"
+            id="rut"
+            formControlName="rut"
+            class="form-control"
+            style="color: #777777;"
+            placeholder="Rut (11111111-K)"
+            required=true
+          />
+          <hr />
+          <ngb-alert [hidden]="rutOk" type="danger" [dismissible]="false">
+            <strong>Atención</strong> Ingrese un RUT válido de la forma 11111111-K.
+          </ngb-alert>
+          <hr />
+          <button
+            class="btn btn-light btn-block"
+            style="background-color: #dfdfdf; color: red;"
+            type="button"
+            (click)="onRegister()"
+          >
+            <i class="fas fa-sign-in-alt"></i>Ingresar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="landing-title">
+        Ingrese URL
+      </h1>
+    </div>
+
+    <div id="logreg-forms" class="mx-auto">
+      <div class="round-border border">
+        <form class="form-signin" (ngSubmit)="guardarVideo()">
+                    <input
+            type="text"
+            id="video"
+            [(ngModel)]="video"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            style="color: #777777;"
+            placeholder="Ingrese URL Vimeo"
+            required=true
+          />
+          <hr />
+          <button
+            class="btn btn-light btn-block"
+            style="background-color: #dfdfdf; color: red;"
+            type="submit"
+          >
+            <i class="fas fa-sign-in-alt"></i>Insertar Vídeo
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

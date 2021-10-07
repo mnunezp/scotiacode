@@ -1,0 +1,68 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/colors';
+
+.container-fluid {
+  max-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background: url('/assets/images/chat.png') no-repeat center;
+  background-size: cover;
+}
+
+.btn-login {
+  background-color: #dfdfdd;
+  width: 100px;
+}
+
+.chat-view {
+  height:auto;
+  max-height:100%;
+  overflow:auto;
+}
+
+.video-frame {
+  display: block;
+  max-height: fit-content;
+  padding: 5px;
+}
+.row.equal {
+
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 500px) {
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: url('/assets/images/chat_mobile.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .video-frame {
+    width: 100%;
+    margin-top: auto;
+    display: block;
+    margin-left: -10px;
+    padding: 5px;
+  }
+}
+.stream{
+  @media screen and (max-width: 992px) {
+    height:100vh;
+    flex-direction: column;
+    justify-content: flex-start!important;
+    flex-wrap: nowrap;
+    & > .col-md-12.col-lg-8{
+      flex: inherit;
+    }
+    & > .col-md-12.col-lg-4{
+      flex: 1 1 auto!important;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.message-list {
+  max-height: 100%;
+  overflow: scroll;
+  flex: 1 0 0;
+}
+.chat-message{
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  height: 100%;
+  max-height: 85%;
+}
+.chat-title {
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Scotia Headline';
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+.input-chat {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.chat_input {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 1em;
+  background-color: #ddd;
+  outline: 1px solid slategrey;
+  border-radius: 1rem;
+  margin-right: 5px;
+}

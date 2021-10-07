@@ -1,0 +1,47 @@
+<div class="container-fluid round-border border h-100 d-flex flex-column justify-content-between">
+  <h1 class="chat-title mb-0">Bienvenidos Live Chat</h1>
+  <div class="col-12 px-0 d-flex flex-column justify-content-between chat-message">
+    <div id="messageContainer" class="message-list">
+      <app-message *ngFor="let message of lastMessage$ | async" [message]="message"></app-message>
+    </div>
+    <div class="input-chat" *ngIf="showInput">
+      <form action="#">
+        <div class="input-group">
+          <input
+            type="text"
+            [(ngModel)]="messageText"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control chat_input"
+            placeholder="Escribe tu mensaje"
+            aria-label="Escribe tu mensaje"
+            aria-describedby="basic-addon2"
+            (keyup.enter)="sendMessage()"
+          />
+          <div class="input-group-append">
+            <button class="btn round-border border" type="button" (click)="sendMessage()">
+              <img class="my-auto" src="/assets/images/send.svg" style="vertical-align: middle!important;" height="20px" width="20px" alt="Enviar" />
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--div class="panel-footer">
+    <div class="input-group col-md-12">
+      <input
+        type="text"
+        [(ngModel)]="messageText"
+        [ngModelOptions]="{ standalone: true }"
+        class="form-control chat_input"
+        placeholder="Escribe tu mensaje"
+        aria-label="Escribe tu mensaje"
+        aria-describedby="basic-addon2"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-outline-light" type="button" (click)="sendMessage()">
+          <img src="/assets/images/send.svg" height="20px" width="20px" alt="Enviar" />
+        </button>
+      </div>
+    </div>
+  </div-->
+</div>

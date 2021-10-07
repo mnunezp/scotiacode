@@ -1,0 +1,37 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/colors';
+
+.container-fluid {position: absolute;
+  background: url('/assets/images/chat.png') no-repeat center;
+  background-size: cover;
+}
+
+.btn-login {
+  background-color: #dfdfdd;
+  width: 100px;
+}
+
+.video-frame {
+  margin-top: 20px;
+  display: block;
+  max-height: fit-content;
+  padding: 5px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 500px) {
+  .container-fluid {
+    background: url('/assets/images/chat_mobile.png') no-repeat center;
+    background-size: cover;
+  }
+
+}
+:host ::ng-deep app-chat {
+  .container-fluid.round-border.border.h-100.d-flex.flex-column.justify-content-between{
+    justify-content: center!important;
+  }
+  .message-list{
+    padding:15px 0;
+  }
+}
